@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rating Translator</title>
+</head>
+<body>
+
+<h2>Rating Description</h2>
+
+<label>Enter rating (1-3):</label>
+<input type="number" id="rating">
+<button onclick="showRating()">Show Description</button>
+
+<p id="result"></p>
+
+<script>
+function showRating() {
+    let rate = parseInt(document.getElementById("rating").value);
+    let description;
+
+    switch(rate) {
+        case 1:
+            description = "Poor";
+            break;
+
+        case 2:
+            description = "Average";
+            break;
+
+        case 3:
+            description = "Good";
+            break;
+
+        default:
+            description = "Invalid rating";
+    }
+
+    document.getElementById("result").innerHTML = description;
+}
+</script>
+
+</body>
+</html>
