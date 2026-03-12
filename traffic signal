@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Light Instruction</title>
+</head>
+<body>
+
+<h2>Traffic Light Signal</h2>
+
+<label>Enter light color (red, yellow, green):</label>
+<input type="text" id="color">
+<button onclick="checkLight()">Check</button>
+
+<p id="result"></p>
+
+<script>
+function checkLight() {
+    let light = document.getElementById("color").value.toLowerCase();
+    let message;
+
+    switch(light) {
+        case "red":
+            message = "Stop";
+            break;
+
+        case "yellow":
+            message = "Get Ready / Slow Down";
+            break;
+
+        case "green":
+            message = "Go";
+            break;
+
+        default:
+            message = "Invalid color";
+    }
+
+    document.getElementById("result").innerHTML = message;
+}
+</script>
+
+</body>
+</html>
