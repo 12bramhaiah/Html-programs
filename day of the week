@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day Name Finder</title>
+</head>
+<body>
+
+<h2>Find Day Name</h2>
+
+<label>Enter a number (1-7):</label>
+<input type="number" id="day">
+<button onclick="showDay()">Show Day</button>
+
+<p id="result"></p>
+
+<script>
+function showDay() {
+    let num = document.getElementById("day").value;
+    let dayName;
+
+    if (num == 1) {
+        dayName = "Sunday";
+    } else if (num == 2) {
+        dayName = "Monday";
+    } else if (num == 3) {
+        dayName = "Tuesday";
+    } else if (num == 4) {
+        dayName = "Wednesday";
+    } else if (num == 5) {
+        dayName = "Thursday";
+    } else if (num == 6) {
+        dayName = "Friday";
+    } else if (num == 7) {
+        dayName = "Saturday";
+    } else {
+        dayName = "Invalid number";
+    }
+
+    document.getElementById("result").innerHTML = dayName;
+}
+</script>
+
+</body>
+</html>
